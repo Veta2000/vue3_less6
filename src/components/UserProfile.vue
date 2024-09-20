@@ -15,8 +15,8 @@
 </template>
 
 <script>
-import { useUserStore } from '../stores/userStore';
-import { useBookStore } from '../stores/bookStore';
+import { useUserStore } from '../stores';
+import { useBookStore } from '../stores';
 
 export default {
   setup() {

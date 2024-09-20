@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import { useUserStore } from '../stores/userStore';
+import {  useUserStore } from '../stores';
 
 export default {
   setup() {

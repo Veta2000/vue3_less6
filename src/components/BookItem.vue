@@ -7,7 +7,8 @@
   </template>
   
   <script>
-  import { useBookStore } from '../stores/bookStore';
+import { useBookStore } from '../stores';
+
   
   export default {
     props: ['book'],
