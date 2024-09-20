@@ -10,7 +10,7 @@ const routes = [
   { path: '/', component: Home },
   { path: '/books', component: BookList },
   { path: '/profile', component: UserProfile, meta: { requiresAuth: true } },
-  { path: '/login', component: Login },
+  { path: '/login', name: 'Login', component: Login },
 ];
 
 const router = createRouter({

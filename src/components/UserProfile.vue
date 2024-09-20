@@ -15,16 +15,22 @@
 </template>
 
 <script>
-import { useUserStore } from '../stores';
-import { useBookStore } from '../stores';
+import { useUserStore } from '../stores/userStore.js';
+import { useBookStore } from '../stores/bookStore.js';
+import { useRouter } from 'vue-router';
+
 
 export default {
   setup() {
     const userStore = useUserStore();
     const bookStore = useBookStore();
+    const router = useRouter();
 
     const logoutUser = () => {
       userStore.logout();
+      router.push(
+      {name : 'Login',}
+      );
     };
 
     return {

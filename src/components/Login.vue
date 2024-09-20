@@ -17,9 +17,8 @@
   
   <script>
   import { ref } from 'vue';
-  import { useUserStore } from '../stores';
-
   import { useRouter } from 'vue-router';
+import { useUserStore } from '../stores/userStore.js';
   
   export default {
     setup() {
@@ -29,10 +28,17 @@
       const userStore = useUserStore();
       const router = useRouter();
   
+      const users = [
+        {
+          login: "user" , 
+          password: "123",
+        }
+      ];
+      
       const loginUser = () => {
-        
-        if (username.value === 'user' && password.value === '123') {
-          userStore.login({ username: username.value });
+        const user = users.find((user) =>username.value === user.login && password.value === user.password)
+        if ( user ) {
+          userStore.login({ username: user.login });
           router.push('/');
         } else {
           errorMessage.value = 'Неверное имя пользователя или пароль';

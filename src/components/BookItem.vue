@@ -7,7 +7,7 @@
   </template>
   
   <script>
-import { useBookStore } from '../stores';
+import { useBookStore } from '../stores/bookStore.js';
 
   
   export default {
